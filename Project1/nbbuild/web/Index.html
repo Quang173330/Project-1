@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <title>Vẽ Đồ Thị Hàm Số </title>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/0.15.0/math.min.js"></script>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+      <script type="text/javascript" src="Calc.js"></script>
+ <link rel="stylesheet" type="text/css" href="View.css">
+  </head>
+<body>
+ <input id="function" placeholder="Nhập hàm số"><br>
+ <input id="valuex" placeholder="Giá trị x" >
+ <button id="button" onclick="f()">Vẽ Biểu Đồ</button>
+  <button id="calc" onclick="calc()">Tính giá trị</button>
+ <button id ="zoomin" onclick="zoomin()">+</button>
+ <button id="zoomout" onclick="zoomout()" >-</button>
+<canvas id="myCanvas" height="652px" width="1356px" >
+</canvas>
+<canvas id="box" height="19px" width="134px"  ></canvas>
+<script type="text/javascript">
+var box = document.getElementById("box");
+var    btx = box.getContext("2d");
+var c = document.getElementById("myCanvas"),
+    ctx = c.getContext("2d"),
+    xmin=-10,
+    xmax=10,
+    ymin=-5,
+    ymax=5,
+    n = 500,// n là số đường thẳng dùng để vẽ biểu đồ 
+    math = mathjs(),
+    scope = { x: 0 };
+drawxy();// hàm vẽ trục oxy và các đường tọa độ 
+
+</script>
+</body>
+</html>
